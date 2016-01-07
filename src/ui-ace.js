@@ -229,7 +229,7 @@ angular.module('ui.ace', [])
                   // digest loop 'cause ACE is actually using this callback
                   // for any text transformation !
                   !scope.$$phase && !scope.$root.$$phase) {
-                scope.$evalAsync(function () {
+                scope.$eval(function () {
                   ngModel.$setViewValue(newValue);
                 });
               }
